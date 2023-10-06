@@ -1,0 +1,814 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+
+body{
+	background-image: url("../texturaMadera.jpg");
+}
+.juegoAparecer{
+	animation: 2s juegoAparecer ease;
+	opacity: 1;
+}
+@keyframes juegoAparecer{
+	0%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.juegoOpacity{
+	opacity: 0.5;
+}
+.seleccion{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	height: 90vh;
+	width: 165vh;
+	border: solid 4px #5d1d02;
+	background-color: #dec18e;
+	position: absolute;
+	top: 5%;
+	left: 13%;
+	padding: 10px;
+	margin: auto;
+	z-index: 2;
+}
+.noSeleccion{
+	animation: 1.5s desaparecerSeleccion ease;
+	display: none;
+	opacity: 0;
+	z-index: 0;
+}
+@keyframes desaparecerSeleccion{
+	0%{
+		display: flex;
+		opacity: 1;
+		z-index: 2;
+	}
+	100%{
+		opacity: 0;
+		display: none;		
+	}
+}
+.selec_img{
+	background-color: #5d1d02;
+	height: 200px;
+	width: 200px;
+	padding: 10px;
+	border: solid 2px #5d1d02;
+}
+.selec_img:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+.img1{
+	background-image: url("../img_puzzle2-2.jpg");
+	background-size: cover;
+}
+.img2{
+	background-image: url("../img_puzzle1-1.jpg");
+	background-size: cover;
+}
+.img3{
+	background-image: url("../preuba_puzzle1.jpg");
+	background-size: cover;
+}
+.img4{
+	background-image: url("../img_puzzle3-3.jpg");
+	background-size: cover;
+}
+.img5{
+	background-image: url("../img_puzzle4.jpg");
+	background-size: cover;
+}
+.img6{
+	background-image: url("../img_puzzle5.avif");
+	background-size: cover;
+}
+.vigente{
+
+}
+.puzzle{
+	display: flex;
+	margin: 25px 50px;
+	padding: 20px;
+}
+.piezas{
+	background-image: url("../texturaMadera2.jpg");
+	width: 300px;
+	height: 93%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 10px;
+	margin: auto;
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	border-radius: 15px;
+}
+.piezas_img{
+	width: 100px;
+	height: 100px;
+	background-color: #888; 
+	padding: 5px;
+	background-image: url("../img_puzzle2-2.jpg");
+	background-repeat: no-repeat;
+	background-size: 600%;
+}
+.pieza1{
+
+	background-position: 50% 50%;
+}
+.pieza2{
+	background-position: 50% 100%;
+}
+.pieza3{
+	background-position: 100% 0;
+}
+.pieza4{
+	background-position: 100% 50%;
+}
+.pieza5{
+	background-position: 0 0;
+}
+.pieza6{
+	background-position: 0% 50%;
+}
+.pieza7{
+	background-position: 100% 100%;
+}
+.pieza8{
+	background-position: 50% 0;
+}
+.pieza9{
+	background-position: 0 100%;
+}
+.sitios{
+	background-color: #1c0d02;
+	border: solid #5d1d02 2px;
+	display: grid;
+	grid-template-columns: repeat(3, 200px);
+	grid-template-rows: repeat(3, 200px);
+	grid-gap: 5px;
+	margin: auto;
+}
+.gapReduce{
+	animation: 0.5s gapReduce ease;
+	grid-gap: 0;
+}
+@keyframes gapReduce{
+	0%{
+		grid-gap: 5px;
+	}
+	100%{
+		grid-gap: 0;
+	}
+}
+.gapReestablece{
+	animation: 0.5s gapReestablece ease;
+	grid-gap: 5px;
+}
+@keyframes gapReestablece{
+	0%{
+		grid-gap: 0;
+	}
+	100%{
+		grid-gap: 5px;
+	}
+}
+.sitios_img{
+	border: solid 1px #5d1d02;
+	background-color: #ac9262;
+}
+.sitios_premium{
+	background-image: url("../img_puzzle2-2.jpg");
+	background-repeat: no-repeat;
+	background-size: 300%;
+}
+.time{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 50px;
+	background-color: #7d1d02aa;
+	font-size: 20px;
+	font-weight: 500;
+	font-family: 'Kanit', sans-serif;
+	letter-spacing: 1px;
+	color: #fff;
+	position: absolute;
+	left: 91.5%;
+	top: 2.5%;
+	animation: border_time 1s linear infinite;
+}
+@keyframes border_time{
+	0%, 100%{
+		border: solid  1px #1c0d02;
+		border-radius: 10px;
+	}	
+	25%, 75%{
+		border: solid 3px red;
+		border-radius: 5px;
+	}
+}
+.movimientos{
+	width: 280px;
+	height: 50px;
+	background-color: #1c0d02aa;
+	position: absolute;
+	top: 11%;
+	left: 80%;
+	display: flex;
+	align-items: center;
+	font-size: 23px;
+	color: #fff;
+	padding: 5px;
+	border-radius: 10px;
+	font-family: 'Kanit', sans-serif;
+	font-weight: 400;
+
+}
+.score{
+	display: flex;
+	height: 50px;
+	width: 150px;
+	background-color: #9d1d02aa;
+	position: absolute;
+	left: 80%;
+	top: 2%;
+	border: solid black 1px;
+	font-size: 20px;
+	color: #fff;
+	padding: 5px;
+	border-radius: 10px;
+	align-items: center;
+	font-family: 'Kanit', sans-serif;
+	font-weight: 400;
+}
+.panel_control{
+	display: flex;
+	width: 350px;
+	height: 400px;
+	border: solid #7d1d02 6px;
+	position: absolute;
+	bottom: 7%;
+	left: 75%;
+	border-radius: 14px;
+	background-image: url("../texturaMadera2.jpg");
+}
+.botonComun{
+	border-radius: 4px;
+	border: solid 4px #7d1d02;
+	background-color: #dec18e;
+	height: 60px;
+	width: 150px;
+	padding: 10px;
+	position: absolute;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #5d1d02;
+}
+.botonComun:hover{
+	background-color: #c5a978;
+}
+.ajustes{
+	top: 8%;
+	left: 4%;
+}
+.idioma{
+	top: 8%;
+	left: 53%;
+}
+.limpiar{
+	top: 40%;
+	left: 4%;
+}
+.mezclar{
+	top: 40%;
+	left: 53%;
+}
+.bandaBlanca{
+	height: 50px;
+	width: 100%;
+	background-color: #dec18e;
+	display: flex; 
+	position: relative;
+	top: 61%;
+}
+.bandaBlanca h3{
+	font-size: 25px;
+	margin: auto; 
+	font-family: 'Kanit', sans-serif;
+	color: #5d1d02;
+}
+.botonEspecial{
+	border-radius: 20px;
+	border: solid 4px #5d1d02;
+	width: 125px;
+	height: 55px;
+	padding: 10px;
+	position: absolute;
+	background-color: #dec18e;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	color: #5d1d02;
+}
+.botonEspecial:hover{
+	background-color: #c5a978;
+}
+.atras{
+	bottom: 5%;
+	left: 10%;
+}
+.siguiente{
+	bottom: 5%;
+	left: 55%;
+};
+
+									/*AJUSTES*/
+.hola{
+	display: flex;
+	height: 50px;
+	width: 100%;
+	background-color: #5d1d02;
+	margin-top: 0;
+}
+.ajustes_img{
+	display: flex;
+	height: 50px;
+	width: 100%;
+	background-color: #5d1d02;
+	margin-top: 0;
+}
+.ajustes_img h2{
+	font-size: 25px;
+	letter-spacing: 2px;
+	color: #fff;
+	font-weight: 500;
+	margin: auto;
+}
+.ajustes_sonido{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 8%;
+}
+.ajustes_opacidad{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 2%;
+}
+.ajustes_sonido span, .ajustes_opacidad span{
+	font-weight: 30px;
+	letter-spacing: 2px;
+	font-weight: 600;
+	position: relative;
+	left: 12%;
+	line-height: 22px;
+	font-size: 20px;
+	color: #5d1d02;
+	font-family: 'Kanit', sans-serif;
+}
+.botonAjustes{
+	display: inline-block;
+	border: solid #5d1d02 3px;
+	font-size: 22px;
+	height: 25px;
+	width: 40px;
+	border-radius: 5px;
+	background-color: transparent;
+	color: #5d1d02;
+	font-family: 'Kanit', sans-serif;
+	line-height: 15px;
+}
+.botonAjustes:hover{
+	background-color: #5d1d02aa;
+	cursor: pointer;
+}
+.masSonido{
+	position: relative;
+	left: 12%;
+}
+.masOpacidad{
+	position: relative;;
+	left: 9.45%;
+}
+.menosOpacidad{
+	position: relative;
+	left: -4%;
+}
+.menosSonido{
+	position: relative;
+	left: -3%;
+}
+.ajustesVolver{
+	display: flex;
+	width: 100%;
+}
+.ajustesVolverBtn{
+	height: 35px;
+	width: 75px;
+	border-radius: 10px;
+	border: solid #5d1d02 3px;
+	background-color: transparent;
+	color: #5d1d02;
+	padding: 4px;
+	letter-spacing: 1px;
+	font-size: 18px;
+	margin: auto;
+	font-family: 'Kanit', sans-serif;
+	transform: translateY(15px);
+	line-height: 25px;
+}
+.ajustesVolverBtn:hover{
+	background-color: #5d1d0299;
+	cursor: pointer;
+}
+.prueba{
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 25%;
+	left: 32%;
+	height: 250px;
+	width: 500px;
+	border-radius: 40px;
+	border: solid #5d1d02 6px;
+	background-image: url("../texturaMadera.jpg");
+	background-size: cover;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.ajustesAparicion{
+	animation: ajustesAparicion 0.5s linear;
+	display: flex;
+	opacity: 1;
+}
+.ajustesDesaparecer{
+	animation: ajustesDesaparecer 0.5s ease;
+}
+@keyframes ajustesAparicion{
+	0%{
+		display: none;
+		opacity: 0;
+	}
+	100%{
+		display: flex;
+		opacity: 1;
+	}
+}
+@keyframes ajustesDesaparecer{
+	0%{
+		display: flex;
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		display: none;
+	}
+}
+
+						/*IDIOMAS*/
+
+.idioma_container{
+	position: absolute;
+	top: 35%;
+	left: 38%;
+	height: 150px;
+	width: 300px;
+	border: solid #5d1d02 5px;
+	border-radius: 30px;
+	background-image: url("../texturaMadera.jpg");
+	display: none;
+	flex-direction: column;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.lenguas{
+	display: flex;
+	background-color: #5d1d02;
+	height: 40px;
+	width: 100%;
+}
+.lenguas h2{
+	font-size: 18px;
+	color: #fff;
+	margin: auto;
+	letter-spacing: 1.5px;
+	font-size: 400;
+}
+.espanglish{
+	display: flex;
+	margin-top: 10%;
+}
+.idioma_ingles, .idioma_español{
+	margin: auto;
+}
+.ingles_button, .español_button{
+	width: 100px;
+	height: 30px;
+	background-color: transparent;
+	border: solid 2px #5d1d02;
+	display: flex;
+	border-radius: 10px;
+}
+.ingles_button span, .español_button span{
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 27px;
+	margin: auto;
+	font-family: 'Kanit', sans-serif;
+	color: #5d1d02;
+}
+.ingles_button:hover, .español_button:hover{
+	cursor: pointer;
+	background-color: #5d1d02aa;
+}
+.anim{
+	animation: animIdioma 0.5s ease;
+	display: flex;
+	opacity: 1;
+}
+@keyframes animIdioma{
+	0%{
+		display: none;
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+		display: flex;
+	}
+}
+.idiomaAnim{
+	animation: buttonIdiomaAnimado 0.3s ease;
+	display: none;
+}
+@keyframes buttonIdiomaAnimado{
+	0%{
+		display: flex;
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		display: none;
+	}
+}
+
+					/*CELEBRACIÓN*/
+@keyframes parpadeo{
+	0%, 100%{
+		opacity: 0.5;
+	}
+	50%{
+		opacity: 1;
+	}
+}
+
+.tiempoTotal{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../texturaMadera.jpg");
+	border: solid 2px #5d1d02;
+	border-radius: 10px;
+	height: 50px;
+	width: 120px;
+	font-size:  20px;
+	letter-spacing: 1px;
+	font-weight: 1000;
+	font-family: 'Kanit', sans-serif;
+	color: #5d1d02;
+	position: absolute;
+	top: 12%;
+	left: 44.5%;
+}
+.tiempo_aparece{
+	animation: aparecerCelebracion 1s ease;
+	display: flex;
+	animation: 1s parpadeo linear infinite;
+}
+.juego_terminado{
+	display: none;
+	flex-direction: column;
+	height: 300px;
+	width: 500px;
+	border-radius: 38px;
+	border: solid 6px #5d1d02;
+	background-image: url("../texturaMadera.jpg");
+	position: absolute;
+	top: 20%;
+	left: 32%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.celebracion_aparece{
+	animation: aparecerCelebracion 1s ease;
+	display: flex;
+}
+@keyframes aparecerCelebracion{
+	0%{
+		display: none;
+		opacity: 0;
+	}
+	100%{
+		display: flex;
+		opacity: 1;
+	}
+}
+.banner{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 60px;
+	background-color: #5d1d02;
+	color: #fff;
+	font-size: 27px;
+	line-height: 55px;
+}
+.lista_jugadores{
+	margin: auto;
+	border-radius: 20px;
+	height: 225px;
+	width: 400px;
+	margin-top: 2%;
+}
+.lista_jugadores div{
+	display: flex;
+	justify-content: space-around;
+	font-size: 25px;
+	padding: 1px;
+	letter-spacing: 2px;
+	font-weight: 600;
+	color: #5d1d02;
+	border-radius: 30px;
+	border: solid 2px #5d1d02;
+	font-family: 'Kanit', sans-serif;
+}
+/*.tu{
+	display: flex;
+	justify-content: space-around;
+}*/
+.mensaje{
+	background-image: url("../texturaMadera.jpg");
+	display: none;
+	width: 500px;
+	height: 50px;
+	border: solid 5px #5d1d02;
+	border-radius: 15px;
+	position: absolute;
+	top: 63%;
+	left: 31.85%;
+}
+.mensaje h2{
+	margin: auto;
+	letter-spacing: 1.5px;
+	font-weight: 600;
+	font-size: 20px;
+	font-family: 'Kanit', sans-serif;
+	animation: 1s parpadeo linear infinite;
+}
+.mensaje_aparece{
+	animation: aparecerCelebracion 1s ease;
+	display: flex;
+}
+
+						/*RESPONSIVE*/
+
+@media (max-width: 1440px){
+	.seleccion{
+		height: 85vh;
+		width: 150vh;
+		left: 10%;
+	}
+	.panel_control{
+		width: 300px;
+		height: 350px;
+		left: 75%;
+	}
+	.botonComun{
+		height: 50px;
+		width: 125px;
+	}
+	.botonEspecial{
+		height: 45px;
+		width: 105px;
+	}
+	.score{
+		height: 45px;
+		width: 135px;
+	}
+	.time{
+		height: 40px;
+		width: 80px;
+	}
+	.movimientos{
+		height: 40px;
+		width: 240px;
+	}
+}
+@media (max-width: 1366px){
+	.seleccion{
+		left: 15%;
+	}
+	.sitios{
+		grid-template-columns: repeat(3, 180px);
+		grid-template-rows: repeat(3, 180px);
+		grid-gap: 3px;
+	}
+	.gapReduce{
+		animation: 1s gapReduce ease;
+		grid-gap: 0;
+	}
+	@keyframes gapReduce{
+		0%{
+			grid-gap: 3px;
+		}
+		100%{
+			grid-gap: 0;
+		}
+	}
+	.gapReestablece{
+		animation: 1s gapReestablece ease;
+		grid-gap: 3px;
+	}
+	@keyframes gapReestablece{
+		0%{
+			grid-gap: 0;
+		}
+		100%{
+			grid-gap: 3px;
+		}
+	}	
+}
+@media (max-width: 1250px){
+	.piezas{
+		width: 250px;
+		height: 88%;
+	}
+	.time{
+		height: 35px;
+		width: 70px;
+		font-size: 16px;
+		left: 90%;
+		top: 3.5%;
+	}
+	.panel_control{
+		left: 74%;
+	}
+	.movimientos, .score{
+		left: 77%;
+	}
+}
+@media (max-width: 1150px){
+	.seleccion{
+		height: 75vh;
+		width: 110vh;
+		top: 10%;
+	}
+	.selec_img{
+		margin: auto;
+	}
+	.piezas{
+		height: 125px;
+		width: 95%;
+	}
+	.piezas_img{
+		margin: auto;
+	}
+	.sitios{
+		grid-template-columns: repeat(3, 150px);
+		grid-template-rows: repeat(3, 150px);
+		grid-gap: 3px;
+		position: absolute;
+		top: 32%;
+		left: 18%;
+	}
+	.panel_control{
+		left: 60%;
+		bottom: 2.5%
+	}
+	.movimientos{
+		left: 60%;
+		top: 37.5%;
+	}
+	.score{
+		left: 60%;
+		top: 28.5%;
+	}
+	.time{
+		top: 25%;
+		left: 35%;
+		height: 40px;
+		width: 80px;
+	}
+}
