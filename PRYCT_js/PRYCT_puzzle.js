@@ -263,7 +263,7 @@ idioma.addEventListener("click", e => {
 const inglesButton = document.querySelector(".ingles_button");
 inglesButton.addEventListener("click", e => {
 	const containerIdioma = document.querySelector(".idioma_container");
-	if (window.location.href === "file:///C:/Users/User/Desktop/PROYECTOS/PORTAFOLIO/portafolio_PRYCT/en/index.html"){
+	if (document.title == "PROYECTO PUZZLE english"){
 		containerIdioma.classList.remove("anim");
 		containerIdioma.classList.toggle("idiomaAnim", true);
 	}
@@ -275,7 +275,7 @@ inglesButton.addEventListener("click", e => {
 const españolButton = document.querySelector(".español_button");
 españolButton.addEventListener("click", e => {
 	const containerIdioma = document.querySelector(".idioma_container");
-	if (window.location.href === "file:///C:/Users/User/Desktop/PROYECTOS/PORTAFOLIO/portafolio_PRYCT/PRYCT_puzzle.html"){
+	if (document.title == "PROYECTO PUZZLE"){
 		containerIdioma.classList.remove("anim");
 		containerIdioma.classList.toggle("idiomaAnim", true);
 	}
